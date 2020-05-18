@@ -1,0 +1,27 @@
+module DIV(in1, in2, out);
+
+parameter DATA_WIDTH = 32;
+
+input [DATA_WIDTH-1:0]in1,in2;
+output  [DATA_WIDTH-1:0]out;
+
+
+wire  [DATA_WIDTH-1:0]out;
+
+assign out[31] = in1[31]^in2[31];
+
+wire [22:0]r_tmp [22:0];
+wire [22:0]q;
+
+wire [23:0]exponent_tmp;
+wire [23:0]exponent_tmp_sub_128;
+wire      exponent_cout; //debug and testbench
+wire      exponent_cout_sub_128; //debug and testbench
+
+FS_24  FRACTION_0 (.a(in1[22 - 0: 0]), .b(in2[22 - 0: 0]),.out(r_tmp[0]),.cin(0),.cout(q[22 - 0]));
+FS_24  FRACTION_1 (.a(({23{q}}&in1[0]) | ((~{23{q}})&r_tmp[0]  )   ), .b({{1{1'b0}},in2[22 : 1]}),.out(r_tmp[1]),.cin(0),.cout(q[22 - 1]));
+
+
+
+
+endmodule
