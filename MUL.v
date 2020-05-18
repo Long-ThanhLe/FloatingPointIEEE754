@@ -15,7 +15,7 @@ wire [23:0]exponent_tmp;
 wire [23:0]exponent_tmp_sub_128;
 wire      exponent_cout; //debug and testbench
 wire      exponent_cout_sub_128; //debug and testbench
-reg [24 - 1 :0] fraction_out_tmp;
+reg [23 - 1 :0] fraction_out_tmp;
 // wire [24 - 1 :0] fraction_tmp [24 - 1 : 0];
 wire [48 - 1 :0] fraction_s_tmp [24 - 1 : 0]; 
 wire [24 - 1 :0] fraction_cout;
@@ -46,22 +46,26 @@ FA_48 FRACTION_FA22 (.a(  {{(24 -22  ){1'b0}},({{1{1'b1}},in1[22:0]}&{24{in2[ 22
 FA_48 FRACTION_FA23 (.a(  {{(24 -23  ){1'b0}},({{1{1'b1}},in1[22:0]}&{24{1'b1}}    ),{ 23{1'b0}}}), .b(fraction_s_tmp[22 ]), .cin(fraction_cout[22 ]), .s(fraction_s_tmp[ 23]), .cout(fraction_cout[23 ]));
 
 // FS_8  EXPONENT_IN1  (.a(in1[30:23]), .b(8'b01111111),.cin(0)                     , .s(exponent_in1)     ,  )
-FA_24  EXPONENT      (.a({ {16{1'b0}},   in1[30:23]}), .b({ {16{1'b0}},   in2[30:23]}), .cin(0), .s(exponent_tmp), .cout(exponent_cout) );
+FA_24  EXPONENT      (.a({ {16{1'b0}},   in1[30:23]}), .b({ {16{1'b0}},   in2[30:23]}), .cin(fraction_s_tmp[23][47]), .s(exponent_tmp), .cout(exponent_cout) );
 FS_24  EXPONENT_SUB_128 (.a(exponent_tmp), .b(24'd127), .cin(0), .out(exponent_tmp_sub_128), .cout(exponent_cout_sub_128));
-always @(in1 or in2)
-begin
-    if (fraction_s_tmp[23][47] == 1)
-        begin
-            assign fraction_out_tmp = fraction_s_tmp[23][46:24];
-        end
-    else
-        begin
-            assign fraction_out_tmp = fraction_s_tmp[23][45:23];
-        end 
-end
 
-assign out[22:0 ] = fraction_out_tmp;
-assign out[30:23] = exponent_tmp_sub_128[7:0    ];
+
+// assign fraction_out_tmp[22:0] = {23{fraction_s_tmp[23][47]}}&fraction_s_tmp[23][46:24] | {23{!fraction_s_tmp[23][47]}}&fraction_s_tmp[23][45:23];
+
+// always @(in1 or in2)
+// begin
+//     if (fraction_s_tmp[23][47] == 1'b1)
+//         begin
+//             assign fraction_out_tmp = fraction_s_tmp[23][46:24];
+//         end
+//     else
+//         begin
+//             assign fraction_out_tmp = fraction_s_tmp[23][45:23];
+//         end 
+// end
+
+assign out[22:0 ] = {23{fraction_s_tmp[23][47]}}&fraction_s_tmp[23][46:24] | {23{!fraction_s_tmp[23][47]}}&fraction_s_tmp[23][45:23];
+assign out[30:23] = exponent_tmp_sub_128[7:0];
 
 
 
