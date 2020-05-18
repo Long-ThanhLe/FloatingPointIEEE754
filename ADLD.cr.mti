@@ -1,0 +1,246 @@
+{E:/TAI LIEU HOC/HK8/KTSNC/Advanced-Digital-Logic-Design-Project/MUX_23_1.v} {1 {vlog -work work -stats=none {E:/TAI LIEU HOC/HK8/KTSNC/Advanced-Digital-Logic-Design-Project/MUX_23_1.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module MUX_23_1
+
+Top level modules:
+	MUX_23_1
+
+} {} {}} {E:/TAI LIEU HOC/HK8/KTSNC/Advanced-Digital-Logic-Design-Project/SW_8bit.v} {1 {vlog -work work -stats=none {E:/TAI LIEU HOC/HK8/KTSNC/Advanced-Digital-Logic-Design-Project/SW_8bit.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module SW_8bit
+
+Top level modules:
+	SW_8bit
+
+} {} {}} {E:/TAI LIEU HOC/HK8/KTSNC/Advanced-Digital-Logic-Design-Project/LINE_2_BI_tb.v} {1 {vlog -work work -stats=none {E:/TAI LIEU HOC/HK8/KTSNC/Advanced-Digital-Logic-Design-Project/LINE_2_BI_tb.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module LINE_2_BI_tb
+
+Top level modules:
+	LINE_2_BI_tb
+
+} {} {}} {E:/TAI LIEU HOC/HK8/KTSNC/Advanced-Digital-Logic-Design-Project/FIRST_1_DETECHTOR.v} {1 {vlog -work work -stats=none {E:/TAI LIEU HOC/HK8/KTSNC/Advanced-Digital-Logic-Design-Project/FIRST_1_DETECHTOR.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module FIRST_1_DETECTOR
+
+Top level modules:
+	FIRST_1_DETECTOR
+
+} {} {}} {E:/TAI LIEU HOC/HK8/KTSNC/Advanced-Digital-Logic-Design-Project/BigAlu_tb.v} {1 {vlog -work work -stats=none {E:/TAI LIEU HOC/HK8/KTSNC/Advanced-Digital-Logic-Design-Project/BigAlu_tb.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module BigAlu_tb
+
+Top level modules:
+	BigAlu_tb
+
+} {} {}} {E:/TAI LIEU HOC/HK8/KTSNC/Advanced-Digital-Logic-Design-Project/FA_25_tb.v} {1 {vlog -work work -stats=none {E:/TAI LIEU HOC/HK8/KTSNC/Advanced-Digital-Logic-Design-Project/FA_25_tb.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module FA_25_tb
+
+Top level modules:
+	FA_25_tb
+
+} {} {}} {E:/TAI LIEU HOC/HK8/KTSNC/Advanced-Digital-Logic-Design-Project/FA_4.v} {1 {vlog -work work -stats=none {E:/TAI LIEU HOC/HK8/KTSNC/Advanced-Digital-Logic-Design-Project/FA_4.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module FA_4
+
+Top level modules:
+	FA_4
+
+} {} {}} {E:/TAI LIEU HOC/HK8/KTSNC/Advanced-Digital-Logic-Design-Project/MUX_23_1_tb.v} {1 {vlog -work work -stats=none {E:/TAI LIEU HOC/HK8/KTSNC/Advanced-Digital-Logic-Design-Project/MUX_23_1_tb.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module MUX_23_1_tb
+
+Top level modules:
+	MUX_23_1_tb
+
+} {} {}} {E:/TAI LIEU HOC/HK8/KTSNC/Advanced-Digital-Logic-Design-Project/LINE_2_BI.v} {1 {vlog -work work -stats=none {E:/TAI LIEU HOC/HK8/KTSNC/Advanced-Digital-Logic-Design-Project/LINE_2_BI.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module LINE_2_BI
+
+Top level modules:
+	LINE_2_BI
+
+} {} {}} {E:/TAI LIEU HOC/HK8/KTSNC/Advanced-Digital-Logic-Design-Project/FA_tb.v} {1 {vlog -work work -stats=none {E:/TAI LIEU HOC/HK8/KTSNC/Advanced-Digital-Logic-Design-Project/FA_tb.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module FA_tb
+
+Top level modules:
+	FA_tb
+
+} {} {}} {E:/TAI LIEU HOC/HK8/KTSNC/Advanced-Digital-Logic-Design-Project/SW_24_tb.v} {1 {vlog -work work -stats=none {E:/TAI LIEU HOC/HK8/KTSNC/Advanced-Digital-Logic-Design-Project/SW_24_tb.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module SW_24_tb
+
+Top level modules:
+	SW_24_tb
+
+} {} {}} {E:/TAI LIEU HOC/HK8/KTSNC/Advanced-Digital-Logic-Design-Project/DECODE_5_32.v} {1 {vlog -work work -stats=none {E:/TAI LIEU HOC/HK8/KTSNC/Advanced-Digital-Logic-Design-Project/DECODE_5_32.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module DECODE_5_32
+
+Top level modules:
+	DECODE_5_32
+
+} {} {}} {E:/TAI LIEU HOC/HK8/KTSNC/Advanced-Digital-Logic-Design-Project/FA_24.v} {1 {vlog -work work -stats=none {E:/TAI LIEU HOC/HK8/KTSNC/Advanced-Digital-Logic-Design-Project/FA_24.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module FA_24
+
+Top level modules:
+	FA_24
+
+} {} {}} {E:/TAI LIEU HOC/HK8/KTSNC/Advanced-Digital-Logic-Design-Project/SW_8bit_tb.v} {1 {vlog -work work -stats=none {E:/TAI LIEU HOC/HK8/KTSNC/Advanced-Digital-Logic-Design-Project/SW_8bit_tb.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module SW_8bit_tb
+
+Top level modules:
+	SW_8bit_tb
+
+} {} {}} {E:/TAI LIEU HOC/HK8/KTSNC/Advanced-Digital-Logic-Design-Project/FA_25.v} {1 {vlog -work work -stats=none {E:/TAI LIEU HOC/HK8/KTSNC/Advanced-Digital-Logic-Design-Project/FA_25.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module FA_25
+
+Top level modules:
+	FA_25
+
+} {} {}} {E:/TAI LIEU HOC/HK8/KTSNC/Advanced-Digital-Logic-Design-Project/MUL.v} {1 {vlog -work work -stats=none {E:/TAI LIEU HOC/HK8/KTSNC/Advanced-Digital-Logic-Design-Project/MUL.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module MUL
+
+Top level modules:
+	MUL
+
+} {} {}} {E:/TAI LIEU HOC/HK8/KTSNC/Advanced-Digital-Logic-Design-Project/SW_23.v} {1 {vlog -work work -stats=none {E:/TAI LIEU HOC/HK8/KTSNC/Advanced-Digital-Logic-Design-Project/SW_23.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module SW_8bit
+
+Top level modules:
+	SW_8bit
+
+} {} {}} {E:/TAI LIEU HOC/HK8/KTSNC/Advanced-Digital-Logic-Design-Project/MUX_32_1.v} {1 {vlog -work work -stats=none {E:/TAI LIEU HOC/HK8/KTSNC/Advanced-Digital-Logic-Design-Project/MUX_32_1.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module MUX_32_1
+
+Top level modules:
+	MUX_32_1
+
+} {} {}} {E:/TAI LIEU HOC/HK8/KTSNC/Advanced-Digital-Logic-Design-Project/FS_24.v} {1 {vlog -work work -stats=none {E:/TAI LIEU HOC/HK8/KTSNC/Advanced-Digital-Logic-Design-Project/FS_24.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module FS_24
+
+Top level modules:
+	FS_24
+
+} {} {}} {E:/TAI LIEU HOC/HK8/KTSNC/Advanced-Digital-Logic-Design-Project/FIRST_1_DETECTOR_tb.v} {1 {vlog -work work -stats=none {E:/TAI LIEU HOC/HK8/KTSNC/Advanced-Digital-Logic-Design-Project/FIRST_1_DETECTOR_tb.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module FIRST_1_DETECTOR_tb
+
+Top level modules:
+	FIRST_1_DETECTOR_tb
+
+} {} {}} {E:/TAI LIEU HOC/HK8/KTSNC/Advanced-Digital-Logic-Design-Project/FA_8.v} {1 {vlog -work work -stats=none {E:/TAI LIEU HOC/HK8/KTSNC/Advanced-Digital-Logic-Design-Project/FA_8.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module FA_8
+
+Top level modules:
+	FA_8
+
+} {} {}} {E:/TAI LIEU HOC/HK8/KTSNC/Advanced-Digital-Logic-Design-Project/SW_24.v} {1 {vlog -work work -stats=none {E:/TAI LIEU HOC/HK8/KTSNC/Advanced-Digital-Logic-Design-Project/SW_24.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module SW_24
+
+Top level modules:
+	SW_24
+
+} {} {}} {E:/TAI LIEU HOC/HK8/KTSNC/Advanced-Digital-Logic-Design-Project/FA.v} {1 {vlog -work work -stats=none {E:/TAI LIEU HOC/HK8/KTSNC/Advanced-Digital-Logic-Design-Project/FA.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module FA
+
+Top level modules:
+	FA
+
+} {} {}} {E:/TAI LIEU HOC/HK8/KTSNC/Advanced-Digital-Logic-Design-Project/SHIFT_RIGHT_tb.v} {1 {vlog -work work -stats=none {E:/TAI LIEU HOC/HK8/KTSNC/Advanced-Digital-Logic-Design-Project/SHIFT_RIGHT_tb.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module SHIFT_RIGHT_tb
+
+Top level modules:
+	SHIFT_RIGHT_tb
+
+} {} {}} {E:/TAI LIEU HOC/HK8/KTSNC/Advanced-Digital-Logic-Design-Project/FS_8.v} {1 {vlog -work work -stats=none {E:/TAI LIEU HOC/HK8/KTSNC/Advanced-Digital-Logic-Design-Project/FS_8.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module FS_8
+
+Top level modules:
+	FS_8
+
+} {} {}} {E:/TAI LIEU HOC/HK8/KTSNC/Advanced-Digital-Logic-Design-Project/FS.v} {1 {vlog -work work -stats=none {E:/TAI LIEU HOC/HK8/KTSNC/Advanced-Digital-Logic-Design-Project/FS.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module FS
+
+Top level modules:
+	FS
+
+} {} {}} {E:/TAI LIEU HOC/HK8/KTSNC/Advanced-Digital-Logic-Design-Project/FA_24_tb.v} {1 {vlog -work work -stats=none {E:/TAI LIEU HOC/HK8/KTSNC/Advanced-Digital-Logic-Design-Project/FA_24_tb.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module FA_24_tb
+
+Top level modules:
+	FA_24_tb
+
+} {} {}} {E:/TAI LIEU HOC/HK8/KTSNC/Advanced-Digital-Logic-Design-Project/ALU_small.v} {1 {vlog -work work -stats=none {E:/TAI LIEU HOC/HK8/KTSNC/Advanced-Digital-Logic-Design-Project/ALU_small.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module ALU_small
+
+Top level modules:
+	ALU_small
+
+} {} {}} {E:/TAI LIEU HOC/HK8/KTSNC/Advanced-Digital-Logic-Design-Project/SHIFT_RIGHT.v} {1 {vlog -work work -stats=none {E:/TAI LIEU HOC/HK8/KTSNC/Advanced-Digital-Logic-Design-Project/SHIFT_RIGHT.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module SHIFT_RIGHT
+
+Top level modules:
+	SHIFT_RIGHT
+
+} {} {}} {E:/TAI LIEU HOC/HK8/KTSNC/Advanced-Digital-Logic-Design-Project/MUX_32_1_tb.v} {1 {vlog -work work -stats=none {E:/TAI LIEU HOC/HK8/KTSNC/Advanced-Digital-Logic-Design-Project/MUX_32_1_tb.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module MUX_32_1_tb
+
+Top level modules:
+	MUX_32_1_tb
+
+} {} {}} {E:/TAI LIEU HOC/HK8/KTSNC/Advanced-Digital-Logic-Design-Project/FS_24_tb.v} {1 {vlog -work work -stats=none {E:/TAI LIEU HOC/HK8/KTSNC/Advanced-Digital-Logic-Design-Project/FS_24_tb.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module FS_24_tb
+
+Top level modules:
+	FS_24_tb
+
+} {} {}} {E:/TAI LIEU HOC/HK8/KTSNC/Advanced-Digital-Logic-Design-Project/FA_8_tb.v} {1 {vlog -work work -stats=none {E:/TAI LIEU HOC/HK8/KTSNC/Advanced-Digital-Logic-Design-Project/FA_8_tb.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module FA_8_tb
+
+Top level modules:
+	FA_8_tb
+
+} {} {}} {E:/TAI LIEU HOC/HK8/KTSNC/Advanced-Digital-Logic-Design-Project/FS_48.v} {1 {vlog -work work -stats=none {E:/TAI LIEU HOC/HK8/KTSNC/Advanced-Digital-Logic-Design-Project/FS_48.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module FA_48
+
+Top level modules:
+	FA_48
+
+} {} {}} {E:/TAI LIEU HOC/HK8/KTSNC/Advanced-Digital-Logic-Design-Project/BigAlu.v} {1 {vlog -work work -stats=none {E:/TAI LIEU HOC/HK8/KTSNC/Advanced-Digital-Logic-Design-Project/BigAlu.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module BigALU
+
+Top level modules:
+	BigALU
+
+} {} {}} {E:/TAI LIEU HOC/HK8/KTSNC/Advanced-Digital-Logic-Design-Project/FS_8_tb.v} {1 {vlog -work work -stats=none {E:/TAI LIEU HOC/HK8/KTSNC/Advanced-Digital-Logic-Design-Project/FS_8_tb.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module FS_8_tb
+
+Top level modules:
+	FS_8_tb
+
+} {} {}}
