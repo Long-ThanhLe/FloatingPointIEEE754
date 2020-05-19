@@ -25,6 +25,10 @@ begin
   exp_max = 125;
   fraction_25 = 25'b0000111110010110111110010 ;
   #10;
+  exp_max = 125;
+  fraction_25 = 25'b1001101001100110011001101 ;
+  #10;
+  
 end
 
 endmodule

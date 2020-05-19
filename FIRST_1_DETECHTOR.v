@@ -12,9 +12,11 @@ output [OUT_W -1:0] out;
 
 wire [WIDTH-1:0] tmp;
 wire [WIDTH-1:0] tmp_xor;
-assign tmp[31:24] = 0;
-assign tmp_xor[31:24] = 0;
-assign tmp[23] = in[23]  | 0;
+assign tmp[31:25] = 0;
+assign tmp_xor[31:25] = 0;
+
+assign tmp[24] = in[24]	| 0;
+assign tmp[23] = tmp[24] | in[23];
 assign tmp[22] = tmp[23] | in[22];
 assign tmp[21] = tmp[22] | in[21];
 assign tmp[20] = tmp[21] | in[20];
@@ -39,7 +41,8 @@ assign tmp[02] = tmp[03] | in[02];
 assign tmp[01] = tmp[02] | in[01];
 assign tmp[00] = tmp[01] | in[00];
 
-assign tmp_xor[23] = tmp[23] ^ 0 ;
+assign tmp_xor[24] = tmp[24] ^ 0;
+assign tmp_xor[23] = tmp[23] ^ tmp[24] ;
 assign tmp_xor[22] = tmp[22] ^ tmp[23] ;
 assign tmp_xor[21] = tmp[21] ^ tmp[22] ;
 assign tmp_xor[20] = tmp[20] ^ tmp[21] ;
