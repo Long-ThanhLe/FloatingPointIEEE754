@@ -5,7 +5,7 @@ module ADD(
     out
 );
 
-// CHoLongCommit
+// CHoLongCommit as;ldkjnasklasdklj asdkljasdkl j exponent_max
 parameter DATA_WIDTH = 32;
 
 input   [DATA_WIDTH - 1:  0]  a, b;
