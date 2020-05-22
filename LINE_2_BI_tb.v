@@ -18,6 +18,8 @@ initial begin
 	in = 1;
 	#10
 	in = 32;
+	#10
+	in = 33554432;
 end
 
 

@@ -8,12 +8,11 @@ reg sign_a;
 reg sign_b;
 reg symbol;
 
-wire [DATA_WITDH - 1: 0] out;
-wire cout;
+wire [DATA_WITDH: 0] out;
 wire sign_out;
 
-BigALU BigALU_1(.a(a), .b(b), .sign_a(sign_a), .sign_b(sign_b), .symbol(symbol),
-                    .out(out), .cout(cout), .sign_out(sign_out));
+BigAlu BigALU_1(.a(a), .b(b), .sign_a(sign_a), .sign_b(sign_b), .symbol(symbol),
+                    .out(out), .sign_out(sign_out));
 
 
 initial
