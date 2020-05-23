@@ -2,8 +2,9 @@ module SpecialNum_tb();
 
 reg     [31:0]  in;
 wire    [2:0]   out;
+wire            check_out;
 
-SepcialNum  SP_tb(.in(in), .out(out));
+SepcialNum  SP_tb(.in(in), .out(out), .check_out(check_out));
 
 initial 
 begin
