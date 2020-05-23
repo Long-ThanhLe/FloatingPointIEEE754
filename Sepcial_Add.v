@@ -33,56 +33,61 @@ assign  check_special = check_a | check_b;
 
 always @(out_a, out_b, symbol)
 begin
-    if (!symbol)
-    begin
-        if  ((out_a == Zero) && (out_b == Normal))                                                 // 0 + B
-            assign out = b;                 
-        if  ((out_a == Zero) && (out_b == Zero))                                                   // 0 + 0
-            assign out = a;                 
-        else if ((out_a == Normal) && (out_b == Zero))                                             // A + 0
-            assign out = a;                 
-         else if ((out_a == Zero) && ((out_b == Inf_pos) || (out_b == Inf_neg)))                   // 0 + (+/-)inf
-            assign out = b;                 
-        else if (((out_a == Inf_pos) || (out_a == Inf_neg)) && (out_b == Zero))                    // (+/-)inf + 0;
-            assign out = a;                 
-        else if ((out_a == Normal) && ((out_b == Inf_pos) || (out_b == Inf_neg)))                  // A + inf
-            assign out = {b[31], Inf_abs};
-        else if (((out_a == Inf_pos) || (out_a == Inf_neg)) && (out_b == Normal))                  // inf + B
-            assign out = {a[31], Inf_abs};
-        else if ((out_a == Inf_pos) && (out_b == Inf_pos))                                         // +inf + (+inf)
-            assign out = a;   
-        else if ((out_a == Inf_pos) && (out_b == Inf_neg))
-            assign out = NaN_num;                                                                  // (+inf) + (-)inf
-        else if ((out_a == Inf_neg) && (out_b == Inf_pos))                                         // (-inf) + (+inf)
-            assign out = NaN_num; 
-        else if ((out_a == Inf_neg) && (out_b == Inf_neg))                                         // (-inf) + (-inf)
-            assign out = a; 
-        else if ((out_a == NaN) || (out_b == NaN))          // 
-            assign out = NaN_num;
-            /*
-    else if (symbol)
-        begin
-          if  ((out_a == Zero) && (out_b == Normal))        // 0 - B
-            assign out = {!b[31], b[30:0]};
-        else if ((out_a == Normal) && (out_b == Zero))      // A - 0
-            assign out = a;
-        else if ((out_a == Normal) && (out_b == Inf))       // A - (+/-)inf
-            assign out = {!b[31], Inf_abs};
-        else if ((out_a == Inf) && (out_b == Normal))       // (+/-)inf - B
-            assign out = a; 
-        else if ((out_a == Zero) && (out_b == Inf))         // 0 - (+/-)inf
-            assign out = {!b[31], Inf_abs};
-        else if ((out_a == Inf) && (out_b == Zero))         // (+/-)inf - 0
-            assign out = a;
-        else if ((out_a == Inf) && (out_b == Inf))
-            if (a[31] == b[31])                             // (+/-)inf - (+/-) inf
-                assign  out = NaN_num;
-            else assign out = a;
-        else if ((out_a == NaN) || (out_b == NaN))          // 
-            assign out = NaN_num;
-        end 
-        */
-    end
+    case (symbol)
+    1'b0:   begin
+                if  ((out_a == Zero) && (out_b == Normal))                                                 // 0 + B
+                    assign out = b;                 
+                else if  ((out_a == Zero) && (out_b == Zero))                                              // 0 + 0
+                    assign out = a;                 
+                else if ((out_a == Normal) && (out_b == Zero))                                             // A + 0
+                    assign out = a;                 
+                else if ((out_a == Zero) && ((out_b == Inf_pos) || (out_b == Inf_neg)))                   // 0 + (+/-)inf
+                    assign out = b;                 
+                else if (((out_a == Inf_pos) || (out_a == Inf_neg)) && (out_b == Zero))                    // (+/-)inf + 0;
+                    assign out = a;                 
+                else if ((out_a == Normal) && ((out_b == Inf_pos) || (out_b == Inf_neg)))                  // A + inf
+                    assign out = {b[31], Inf_abs};
+                else if (((out_a == Inf_pos) || (out_a == Inf_neg)) && (out_b == Normal))                  // inf + B
+                    assign out = {a[31], Inf_abs};
+                else if ((out_a == Inf_pos) && (out_b == Inf_pos))                                         // +inf + (+inf)
+                    assign out = a;   
+                else if ((out_a == Inf_pos) && (out_b == Inf_neg))
+                    assign out = NaN_num;                                                                  // (+inf) + (-)inf
+                else if ((out_a == Inf_neg) && (out_b == Inf_pos))                                         // (-inf) + (+inf)
+                    assign out = NaN_num; 
+                else if ((out_a == Inf_neg) && (out_b == Inf_neg))                                         // (-inf) + (-inf)
+                    assign out = a; 
+                else if ((out_a == NaN) || (out_b == NaN))          // 
+                    assign out = NaN_num;    
+            end
+    1'b1:   begin
+                if  ((out_a == Zero) && (out_b == Normal))                                                 // 0 - B
+                    assign out = {!b[31],b[30:0]};                 
+                else if  ((out_a == Zero) && (out_b == Zero))                                              // 0 - 0
+                    assign out = a;                 
+                else if ((out_a == Normal) && (out_b == Zero))                                             // A - 0
+                    assign out = a;                 
+                 else if ((out_a == Zero) && ((out_b == Inf_pos) || (out_b == Inf_neg)))                   // 0 - (+/-)inf
+                    assign out = {!b[31],Inf_abs};                   
+                else if (((out_a == Inf_pos) || (out_a == Inf_neg)) && (out_b == Zero))                    // (+/-)inf - 0;
+                    assign out = a;                 
+                else if ((out_a == Normal) && ((out_b == Inf_pos) || (out_b == Inf_neg)))                  // A - (+/-)inf
+                    assign out = {!b[31], Inf_abs};
+                else if (((out_a == Inf_pos) || (out_a == Inf_neg)) && (out_b == Normal))                  // inf - B
+                    assign out = {a[31], Inf_abs};
+                else if ((out_a == Inf_pos) && (out_b == Inf_pos))                                         // +inf - (+inf)
+                    assign out = NaN_num;   
+                else if ((out_a == Inf_pos) && (out_b == Inf_neg))                                         // (+inf) - (-)inf
+                    assign out = a;                                                                  
+                else if ((out_a == Inf_neg) && (out_b == Inf_pos))                                         // (-inf) - (+inf)
+                    assign out = a;
+                else if ((out_a == Inf_neg) && (out_b == Inf_neg))                                         // (-inf) - (-inf)
+                    assign out = NaN_num; 
+                else if ((out_a == NaN) || (out_b == NaN))          // 
+                    assign out = NaN_num;
+                end
+    default:    ;
+    endcase
 end
 
 endmodule
