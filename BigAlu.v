@@ -38,7 +38,7 @@ SW_24 SW_24_ALU(.in_0(out_sub_pos), .in_1(out_sub_neg), .sel(c_sub), .out(out_su
 xor (tmp, c_sub, 1'b1);
 
 
-always @(sign_a or symbol or sign_b)
+always @(sign_a, symbol, sign_b)
 begin
   case ({sign_a, symbol, sign_b})
     3'b000  : begin  // A + B
@@ -78,7 +78,7 @@ begin
                 assign  sign_out = tmp;
               end
               
-    default : #100;
+    default : ;
   endcase
 end
 
