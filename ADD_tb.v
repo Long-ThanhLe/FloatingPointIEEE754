@@ -1,7 +1,7 @@
 module ADD_tb();
 
 parameter DATA_WIDTH = 32;
-
+  
 reg   [DATA_WIDTH - 1:  0]  a, b;
 reg   symbol;
 wire  [DATA_WIDTH - 1: 0] out;
@@ -59,6 +59,4 @@ begin
   symbol = 1;
   #10;
 end
-
-
 endmodule
