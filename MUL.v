@@ -6,9 +6,9 @@ input [DATA_WIDTH-1:0]in1,in2;
 output  [DATA_WIDTH-1:0]out;
 
 
-wire  [DATA_WIDTH-1:0]out;
-
-assign out[31] = in1[31]^in2[31];
+// wire  [DATA_WIDTH-1:0]out;
+// wire [DATA_WIDTH-1:0]in1,in2;
+// assign out[31] = in1[31]^in2[31];
 
 
 wire [23:0]exponent_tmp;
@@ -63,9 +63,34 @@ FS_24  EXPONENT_SUB_128 (.a(exponent_tmp), .b(24'd127), .cin(0), .out(exponent_t
 //             assign fraction_out_tmp = fraction_s_tmp[23][45:23];
 //         end 
 // end
+reg [31:0]tmp;
 
-assign out[22:0 ] = {23{fraction_s_tmp[23][47]}}&fraction_s_tmp[23][46:24] | {23{!fraction_s_tmp[23][47]}}&fraction_s_tmp[23][45:23];
-assign out[30:23] = exponent_tmp_sub_128[7:0];
+assign out[31:0] = tmp[31:0];
+
+always @(in1, in2) begin
+	if ((in1[30:23] == 8'b0000_0000) || (in2[30:23] == 8'b0000_0000)) // 
+	begin
+		if ((in1[22:0] != {23{1'b0}}) || (in2[22:0] != {23{1'b0}}))
+			tmp[31:0] = {1'b0, 8'b11111111, {23{1'b0}}}; // NaN
+		else 
+			// tmp[31:0] = { in1[],31'b000_0000_0000_0000_0000_0000_0000_0000}; // True Zero
+	end
+	else
+	begin	
+		if ((in1[30:23] == 8'b11111111) || (in2[30:23] == 8'b11111111)) // 255
+			begin
+				if ((in1[22:0] != {23{1'b0}}) || (in2[22:0] != {23{1'b0}})) // NaN
+					tmp[31:0] = {1'b0, 8'b11111111, {23{1'b0}}};  
+				else                                                          // inf
+					tmp[31:0] = {{in1[31]^in2[31]},31'b111_1111_0000_0000_0000_0000_0000_0000};
+			end
+		else // normal case
+			begin
+				tmp[22:0 ] = {23{fraction_s_tmp[23][47]}}&fraction_s_tmp[23][46:24] | {23{!fraction_s_tmp[23][47]}}&fraction_s_tmp[23][45:23];
+				tmp[30:23] = exponent_tmp_sub_128[7:0];
+			end
+	end
+end
 
 
 
