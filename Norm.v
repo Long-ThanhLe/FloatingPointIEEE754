@@ -26,7 +26,7 @@ FA_8                FA_EXP(.a(exp_max),     .b(8'b00000001),   .cin(1'b0),     .
 
 FS_8                FS_EXP_INDEX(.a(exp_max), .b(shift_num), .cin(1'b0), .out(exp_sub_index),    .cout(cout_exp_sub_index));
 
-SHIFT_LEFT          SHIFT_LEFT_FRACTION(.in({7'b0,fraction_25}),  .out(fraction_shift), .shift_num(shift_num));
+SHIFT_LEFT          SHIFT_LEFT_FRACTION(.in({7'b0,fraction_25}),  .out(fraction_shift), .shift_num(shift_num[4:0]));
 
 assign fraction_out =   (({23{~cout}}) & (fraction_shift[22:0])) | (({23{cout}}) & (fraction_25[23:1]));
 assign exp_out_tmp  =   (({8{~cout}}) & (exp_sub_index)) | (({8{cout}}) & (exp_inc));

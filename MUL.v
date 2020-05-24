@@ -20,7 +20,7 @@ reg [23 - 1 :0] fraction_out_tmp;
 wire [48 - 1 :0] fraction_s_tmp [24 - 1 : 0]; 
 wire [24 - 1 :0] fraction_cout;
 
-FA_48  FRACTION_FA0 (.a(  {{(24 - 0  ){1'b0}},({{1{1'b1}},in1[22:0]}&{24{in2[  0]}})            }), .b({48{1'b0}})           , .cin(0),                 .s(fraction_s_tmp[  0]), .cout(fraction_cout[ 0 ]));
+FA_48  FRACTION_FA0 (.a(  {{(24 - 0  ){1'b0}},({{1{1'b1}},in1[22:0]}&{24{in2[  0]}})            }), .b({48{1'b0}})           , .cin(1'b0),                 .s(fraction_s_tmp[  0]), .cout(fraction_cout[ 0 ]));
 FA_48  FRACTION_FA1 (.a(  {{(24 - 1  ){1'b0}},({{1{1'b1}},in1[22:0]}&{24{in2[  1]}}),{  1{1'b0}}}), .b(fraction_s_tmp[ 0 ]), .cin(fraction_cout[ 0 ]), .s(fraction_s_tmp[  1]), .cout(fraction_cout[ 1 ]));
 FA_48  FRACTION_FA2 (.a(  {{(24 - 2  ){1'b0}},({{1{1'b1}},in1[22:0]}&{24{in2[  2]}}),{  2{1'b0}}}), .b(fraction_s_tmp[ 1 ]), .cin(fraction_cout[ 1 ]), .s(fraction_s_tmp[  2]), .cout(fraction_cout[ 2 ]));
 FA_48  FRACTION_FA3 (.a(  {{(24 - 3  ){1'b0}},({{1{1'b1}},in1[22:0]}&{24{in2[  3]}}),{  3{1'b0}}}), .b(fraction_s_tmp[ 2 ]), .cin(fraction_cout[ 2 ]), .s(fraction_s_tmp[  3]), .cout(fraction_cout[ 3 ]));
@@ -47,7 +47,7 @@ FA_48 FRACTION_FA23 (.a(  {{(24 -23  ){1'b0}},({{1{1'b1}},in1[22:0]}&{24{1'b1}} 
 
 // FS_8  EXPONENT_IN1  (.a(in1[30:23]), .b(8'b01111111),.cin(0)                     , .s(exponent_in1)     ,  )
 FA_24  EXPONENT      (.a({ {16{1'b0}},   in1[30:23]}), .b({ {16{1'b0}},   in2[30:23]}), .cin(fraction_s_tmp[23][47]), .s(exponent_tmp), .cout(exponent_cout) );
-FS_24  EXPONENT_SUB_128 (.a(exponent_tmp), .b(24'd127), .cin(0), .out(exponent_tmp_sub_128), .cout(exponent_cout_sub_128));
+FS_24  EXPONENT_SUB_128 (.a(exponent_tmp), .b(24'd127), .cin(1'b0), .out(exponent_tmp_sub_128), .cout(exponent_cout_sub_128));
 
 
 // assign fraction_out_tmp[22:0] = {23{fraction_s_tmp[23][47]}}&fraction_s_tmp[23][46:24] | {23{!fraction_s_tmp[23][47]}}&fraction_s_tmp[23][45:23];
@@ -73,7 +73,7 @@ always @(in1, in2) begin
 		if ((in1[22:0] != {23{1'b0}}) || (in2[22:0] != {23{1'b0}}))
 			tmp[31:0] = {1'b0, 8'b11111111, {23{1'b0}}}; // NaN
 		else 
-			// tmp[31:0] = { in1[],31'b000_0000_0000_0000_0000_0000_0000_0000}; // True Zero
+			tmp[31:0] = { in1[31],31'b000_0000_0000_0000_0000_0000_0000_0000}; // True Zero
 	end
 	else
 	begin	
