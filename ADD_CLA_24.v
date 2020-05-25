@@ -9,12 +9,12 @@ module ADD_CLA_24(
 );
 
 input   [23:0]   iA, iB;
-input           iC;
+input            iC;
 
 output  [23:0]   oS;
-output          oG, oP, oC;
+output           oG, oP, oC;
 
-wire    [2:0]   G, P, C;
+wire    [2:0]    G, P, C;
 
 ADD_CLA_8      adder0(.iA(iA[7:0]), .iB(iB[7:0]), .iC(C[0]), .oS(oS[7:0]), .oG(G[0]), .oP(P[0]), .oC());
 ADD_CLA_8      adder1(.iA(iA[15:8]), .iB(iB[15:8]), .iC(C[1]), .oS(oS[15:8]), .oG(G[1]), .oP(P[1]), .oC());
