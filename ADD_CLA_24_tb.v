@@ -22,6 +22,11 @@ begin
   iA = 24'b11111111;
   iB = 24'b11111111;
   iC = 1'b1;
+  #10;
+  iA = 24'd100;
+  iB = 24'd215;
+  iC = 1'b0;
+  #10;
 end
 
 endmodule

@@ -117,9 +117,9 @@ wire [23: 0] out_plus, out_sub, out_sub_neg, out_sub_pos;
 wire c_plus, c_sub, c_out_sub_neg;
 wire tmp;
 
-ADD_CLA_24 ADD_CLA_24_ALU(.a(a), .b(b), .cin(1'b0), .s(out_plus), .cout(c_plus));  // A + B
-SUB_CLA_24 SUB_CLA_24_ALU(.a(a), .b(b), .cin(1'b0), .out(out_sub_pos), .cout(c_sub)); // A - B
-SUB_CLA_24 SUB_CLA_24_NEG(.a(b), .b(a), .cin(1'b0), .out(out_sub_neg), .cout(c_out_sub_neg)); // B - A
+ADD_CLA_24 ADD_CLA_24_ALU(.iA(a), .iB(b), .iC(1'b0), .oS(out_plus), .oC(c_plus), .oP(), .oG());  // A + B
+SUB_CLA_24 SUB_CLA_24_ALU(.iA(a), .iB(b), .iC(1'b0), .oS(out_sub_pos), .oC(c_sub), .oP(), .oG()); // A - B
+SUB_CLA_24 SUB_CLA_24_NEG(.iA(b), .iB(a), .iC(1'b0), .oS(out_sub_neg), .oC(c_out_sub_neg), .oP(), .oG()); // B - A
 
 SW_24 SW_24_ALU(.in_0(out_sub_pos), .in_1(out_sub_neg), .sel(c_sub), .out(out_sub));
 
