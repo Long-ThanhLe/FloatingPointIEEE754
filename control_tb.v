@@ -5,12 +5,16 @@ reg [7: 0] diff_exp;
 reg sign_exp;
 reg sign_a, sign_b, symbol;
 
-wire [24: 0] out;
-wire sign_out;
+wire [24: 0] out, out_cla;
+wire sign_out, sign_out_cla;
 
-control Control_0(.diff_exp(diff_exp),      .sign_exp(sign_exp),    .fraction_a(fraction_a),
-                  .fraction_b(fraction_b),  .sign_a(sign_a),        .sign_b(sign_b),    .symbol(symbol),
-                  .out(out),                .sign_out(sign_out));
+control       Control_0(.diff_exp(diff_exp),      .sign_exp(sign_exp),    .fraction_a(fraction_a),
+                       .fraction_b(fraction_b),  .sign_a(sign_a),        .sign_b(sign_b),    .symbol(symbol),
+                       .out(out),                .sign_out(sign_out));
+
+control_CLA   Control_1(.diff_exp(diff_exp),      .sign_exp(sign_exp),    .fraction_a(fraction_a),
+                        .fraction_b(fraction_b),  .sign_a(sign_a),        .sign_b(sign_b),    .symbol(symbol),
+                        .out(out_cla),            .sign_out(sign_out_cla));
 
 
 initial 
