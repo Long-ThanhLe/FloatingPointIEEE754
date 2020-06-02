@@ -1,25 +1,26 @@
 module MUL(in1, in2, out);
 
-parameter DATA_WIDTH = 32;
-
-input [DATA_WIDTH-1:0]in1,in2;
-output  [DATA_WIDTH-1:0]out;
-
-
-// wire  [DATA_WIDTH-1:0]out;
-// wire [DATA_WIDTH-1:0]in1,in2;
-// assign out[31] = in1[31]^in2[31];
-
+input [31:0]in1,in2;
+output  [31:0]out;
 
 wire [23:0]exponent_tmp;
 wire [23:0]exponent_tmp_sub_128;
 wire      exponent_cout; //debug and testbench
 wire      exponent_cout_sub_128; //debug and testbench
-reg [23 - 1 :0] fraction_out_tmp;
-// wire [24 - 1 :0] fraction_tmp [24 - 1 : 0];
-wire [48 - 1 :0] fraction_s_tmp [24 - 1 : 0]; 
-wire [24 - 1 :0] fraction_cout;
 
+wire [47 :0] fraction_s_tmp [24 - 1 : 0]; 
+wire [23 :0] fraction_cout;
+
+wire    [31: 0] out_normal, out_special;
+wire            check_special;
+
+wire test;
+
+assign test = in1[31];
+// Special Case
+MUL_special_case     SP_MUL(.a(in1[31:0]), .b(in2[31:0]), .out(out_special[31:0]), .check_special(check_special));
+
+// Normal Case
 FA_48  FRACTION_FA0 (.a(  {{(24 - 0  ){1'b0}},({{1{1'b1}},in1[22:0]}&{24{in2[  0]}})            }), .b({48{1'b0}})           , .cin(1'b0),                 .s(fraction_s_tmp[  0]), .cout(fraction_cout[ 0 ]));
 FA_48  FRACTION_FA1 (.a(  {{(24 - 1  ){1'b0}},({{1{1'b1}},in1[22:0]}&{24{in2[  1]}}),{  1{1'b0}}}), .b(fraction_s_tmp[ 0 ]), .cin(fraction_cout[ 0 ]), .s(fraction_s_tmp[  1]), .cout(fraction_cout[ 1 ]));
 FA_48  FRACTION_FA2 (.a(  {{(24 - 2  ){1'b0}},({{1{1'b1}},in1[22:0]}&{24{in2[  2]}}),{  2{1'b0}}}), .b(fraction_s_tmp[ 1 ]), .cin(fraction_cout[ 1 ]), .s(fraction_s_tmp[  2]), .cout(fraction_cout[ 2 ]));
@@ -45,54 +46,16 @@ FA_48 FRACTION_FA21 (.a(  {{(24 -21  ){1'b0}},({{1{1'b1}},in1[22:0]}&{24{in2[ 21
 FA_48 FRACTION_FA22 (.a(  {{(24 -22  ){1'b0}},({{1{1'b1}},in1[22:0]}&{24{in2[ 22]}}),{ 22{1'b0}}}), .b(fraction_s_tmp[21 ]), .cin(fraction_cout[21 ]), .s(fraction_s_tmp[ 22]), .cout(fraction_cout[22 ]));
 FA_48 FRACTION_FA23 (.a(  {{(24 -23  ){1'b0}},({{1{1'b1}},in1[22:0]}&{24{1'b1}}    ),{ 23{1'b0}}}), .b(fraction_s_tmp[22 ]), .cin(fraction_cout[22 ]), .s(fraction_s_tmp[ 23]), .cout(fraction_cout[23 ]));
 
-// FS_8  EXPONENT_IN1  (.a(in1[30:23]), .b(8'b01111111),.cin(0)                     , .s(exponent_in1)     ,  )
-FA_24  EXPONENT      (.a({ {16{1'b0}},   in1[30:23]}), .b({ {16{1'b0}},   in2[30:23]}), .cin(fraction_s_tmp[23][47]), .s(exponent_tmp), .cout(exponent_cout) );
+FA_24  EXPONENT      (.a({ {16{1'b0}},   in1[30:23]}), .b({ {16{1'b0}},   in2[30:23]}), 
+.cin(fraction_s_tmp[23][47]), .s(exponent_tmp), .cout(exponent_cout) );
 FS_24  EXPONENT_SUB_128 (.a(exponent_tmp), .b(24'd127), .cin(1'b0), .out(exponent_tmp_sub_128), .cout(exponent_cout_sub_128));
 
+assign	out_normal[22:0] = {23{fraction_s_tmp[23][47]}}&fraction_s_tmp[23][46:24] 
+							| {23{!fraction_s_tmp[23][47]}}&fraction_s_tmp[23][45:23];
+assign	out_normal[30:23] = exponent_tmp_sub_128[7:0];
+assign	out_normal[31] = in1[31]^in2[31];
 
-// assign fraction_out_tmp[22:0] = {23{fraction_s_tmp[23][47]}}&fraction_s_tmp[23][46:24] | {23{!fraction_s_tmp[23][47]}}&fraction_s_tmp[23][45:23];
-
-// always @(in1 or in2)
-// begin
-//     if (fraction_s_tmp[23][47] == 1'b1)
-//         begin
-//             assign fraction_out_tmp = fraction_s_tmp[23][46:24];
-//         end
-//     else
-//         begin
-//             assign fraction_out_tmp = fraction_s_tmp[23][45:23];
-//         end 
-// end
-reg [31:0]tmp;
-
-assign out[31:0] = tmp[31:0];
-
-always @(in1, in2) begin
-	if ((in1[30:23] == 8'b0000_0000) || (in2[30:23] == 8'b0000_0000)) // 
-	begin
-		if ((in1[22:0] != {23{1'b0}}) || (in2[22:0] != {23{1'b0}}))
-			tmp[31:0] = {1'b0, 8'b11111111, {23{1'b0}}}; // NaN
-		else 
-			tmp[31:0] = { in1[31],31'b000_0000_0000_0000_0000_0000_0000_0000}; // True Zero
-	end
-	else
-	begin	
-		if ((in1[30:23] == 8'b11111111) || (in2[30:23] == 8'b11111111)) // 255
-			begin
-				if ((in1[22:0] != {23{1'b0}}) || (in2[22:0] != {23{1'b0}})) // NaN
-					tmp[31:0] = {1'b0, 8'b11111111, {23{1'b0}}};  
-				else                                                          // inf
-					tmp[31:0] = {{in1[31]^in2[31]},31'b111_1111_0000_0000_0000_0000_0000_0000};
-			end
-		else // normal case
-			begin
-				tmp[22:0 ] = {23{fraction_s_tmp[23][47]}}&fraction_s_tmp[23][46:24] | {23{!fraction_s_tmp[23][47]}}&fraction_s_tmp[23][45:23];
-				tmp[30:23] = exponent_tmp_sub_128[7:0];
-			end
-	end
-end
-
-
-
+// Result
+assign  out = ({32{!check_special}} & (out_normal)) | ({32{check_special}} & (out_special));
 
 endmodule
