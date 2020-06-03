@@ -8,7 +8,7 @@ output  [DATA_WIDTH-1:0]out;
 
 wire  [DATA_WIDTH-1:0]out;
 
-assign out[31] = in1[31]^in2[31];
+
 
 wire [23:0]in_tmp[24:0];
 wire [23:0]r_tmp [24:0];
@@ -19,7 +19,7 @@ wire [23:0]exponent_tmp_sub_128;
 wire      exponent_cout; //debug and testbench
 wire      exponent_cout_sub_128; //debug and testbench
 wire last_cout, lcout;
-FS_24   FRACTION_  (.a({{1{1'b1}},in1[22 - 0: 0]}),     .b({{  1{1'b1}},in2[22 :  0 ]}),.out(r_tmp[  0]),.cin(1'b0),.cout(q[24 -  0 ])); assign in_tmp[  0] = {{1{1'b1}},in1[22 - 0: 0]};
+FS_24   FRACTION_  (.a({{1{1'b1}},in1[22 - 0: 0]}),     										.b({{  1{1'b1}},in2[22 :  0 ]}),		 .out(r_tmp[  0]),.cin(1'b0),.cout(q[24 -  0 ])); assign in_tmp[  0] = {{1{1'b1}},in1[22 - 0: 0]};
 FS_24   FRACTION_0 (.a(({24{q[24 -  0]}}&in_tmp[ 0] ) | (({24{~q[24 -  0]}})&r_tmp[  0]  )   ), .b({{  1{1'b0}},{1{1'b1}},in2[22 :  1]}),.out(r_tmp[  1]),.cin(1'b0),.cout(q[24 -  1 ])); assign in_tmp[  1] = ({24{q[24 -  0]}}&in_tmp[ 0] ) | (({24{~q[24 -  0]}})&r_tmp[  0]  )  ;
 FS_24   FRACTION_1 (.a(({24{q[24 -  1]}}&in_tmp[ 1] ) | (({24{~q[24 -  1]}})&r_tmp[  1]  )   ), .b({{  2{1'b0}},{1{1'b1}},in2[22 :  2]}),.out(r_tmp[  2]),.cin(1'b0),.cout(q[24 -  2 ])); assign in_tmp[  2] = ({24{q[24 -  1]}}&in_tmp[ 1] ) | (({24{~q[24 -  1]}})&r_tmp[  1]  )  ;
 FS_24   FRACTION_2 (.a(({24{q[24 -  2]}}&in_tmp[ 2] ) | (({24{~q[24 -  2]}})&r_tmp[  2]  )   ), .b({{  3{1'b0}},{1{1'b1}},in2[22 :  3]}),.out(r_tmp[  3]),.cin(1'b0),.cout(q[24 -  3 ])); assign in_tmp[  3] = ({24{q[24 -  2]}}&in_tmp[ 2] ) | (({24{~q[24 -  2]}})&r_tmp[  2]  )  ;
@@ -46,23 +46,26 @@ FS_24  FRACTION_22 (.a(({24{q[24 - 22]}}&in_tmp[22] ) | (({24{~q[24 - 22]}})&r_t
 FS_24  FRACTION_23 (.a(({24{q[24 - 23]}}&in_tmp[23] ) | (({24{~q[24 - 23]}})&r_tmp[ 23]  )   ), .b({{ 24{1'b0}}                       }),.out(r_tmp[ 24]),.cin(1'b0),.cout(q[24 - 24 ])); assign in_tmp[ 24] = ({24{q[24 - 23]}}&in_tmp[23] ) | (({24{~q[24 - 23]}})&r_tmp[ 23]  )  ;
 
 reg [31:0] tmp, out_normal;
-assign out[31:0] = tmp[31:0];
+//out[31:0] = tmp[31:0];
 wire [23:0] out_normal_tmp; 
 
 FS_24 EXP(.a({{16{1'b0}},in1[30:23]}), .b({{16{1'b0}},in2[30:23]}), .cin(q[24]), .cout(last_cout), .out(exponent_tmp[23:0]));
 FA_24 EXP_(.a(exponent_tmp[23:0]), .b(24'd127), .s(out_normal_tmp[23:0]), .cin(1'b0), .cout(lcout));
+assign out = tmp;
 
-always @(in1, in2) begin
+always @(*) begin
+	
 	out_normal[30:23] = out_normal_tmp[7:0];
 	out_normal[22:0] = (({23{q[24]}})&~q[22:0])    | ({23{~q[24]}}&~q[23:1]);
 
 	if ((in1[30:23] == 8'b0000_0000) || (in2[30:23] == 8'b0000_0000)) // 0
 	begin
-
+		  tmp = 32'b0;
 	end
 	else
 	begin	
-
+		  tmp[31] = in1[31]^in2[31];
+		  tmp[30:0] = out_normal[30:0];
 	end
 end
 
