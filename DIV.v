@@ -5,20 +5,25 @@ parameter DATA_WIDTH = 32;
 input [DATA_WIDTH-1:0]in1,in2;
 output  [DATA_WIDTH-1:0]out;
 
+wire [DATA_WIDTH-1:0]	out;
+wire [23:0]	in_tmp[24:0];
+wire [23:0]	r_tmp [24:0];
+wire [24:0]	q;
 
-wire  [DATA_WIDTH-1:0]out;
+wire [23:0]	exponent_tmp;
+wire [23:0]	exponent_tmp_sub_128;
+wire      	exponent_cout; //debug and testbench
+wire      	exponent_cout_sub_128; //debug and testbench
+wire 		last_cout, lcout;
+wire [23:0] out_normal_tmp;
 
-assign out[31] = in1[31]^in2[31];
+wire    [31: 0] out_normal, out_special;
+wire            check_special;
 
-wire [23:0]in_tmp[24:0];
-wire [23:0]r_tmp [24:0];
-wire [24:0]q;
+// Special Case
+DIV_special_case     SP_DIV(.a(in1[31:0]), .b(in2[31:0]), .out(out_special[31:0]), .check_special(check_special));
 
-wire [23:0]exponent_tmp;
-wire [23:0]exponent_tmp_sub_128;
-wire      exponent_cout; //debug and testbench
-wire      exponent_cout_sub_128; //debug and testbench
-wire last_cout, lcout;
+// Normal Case
 FS_24   FRACTION_  (.a({{1{1'b1}},in1[22 - 0: 0]}),     .b({{  1{1'b1}},in2[22 :  0 ]}),.out(r_tmp[  0]),.cin(1'b0),.cout(q[24 -  0 ])); assign in_tmp[  0] = {{1{1'b1}},in1[22 - 0: 0]};
 FS_24   FRACTION_0 (.a(({24{q[24 -  0]}}&in_tmp[ 0] ) | (({24{~q[24 -  0]}})&r_tmp[  0]  )   ), .b({{  1{1'b0}},{1{1'b1}},in2[22 :  1]}),.out(r_tmp[  1]),.cin(1'b0),.cout(q[24 -  1 ])); assign in_tmp[  1] = ({24{q[24 -  0]}}&in_tmp[ 0] ) | (({24{~q[24 -  0]}})&r_tmp[  0]  )  ;
 FS_24   FRACTION_1 (.a(({24{q[24 -  1]}}&in_tmp[ 1] ) | (({24{~q[24 -  1]}})&r_tmp[  1]  )   ), .b({{  2{1'b0}},{1{1'b1}},in2[22 :  2]}),.out(r_tmp[  2]),.cin(1'b0),.cout(q[24 -  2 ])); assign in_tmp[  2] = ({24{q[24 -  1]}}&in_tmp[ 1] ) | (({24{~q[24 -  1]}})&r_tmp[  1]  )  ;
@@ -45,25 +50,14 @@ FS_24  FRACTION_21 (.a(({24{q[24 - 21]}}&in_tmp[21] ) | (({24{~q[24 - 21]}})&r_t
 FS_24  FRACTION_22 (.a(({24{q[24 - 22]}}&in_tmp[22] ) | (({24{~q[24 - 22]}})&r_tmp[ 22]  )   ), .b({{ 23{1'b0}},{1{1'b1}}             }),.out(r_tmp[ 23]),.cin(1'b0),.cout(q[24 - 23 ])); assign in_tmp[ 23] = ({24{q[24 - 22]}}&in_tmp[22] ) | (({24{~q[24 - 22]}})&r_tmp[ 22]  )  ;
 FS_24  FRACTION_23 (.a(({24{q[24 - 23]}}&in_tmp[23] ) | (({24{~q[24 - 23]}})&r_tmp[ 23]  )   ), .b({{ 24{1'b0}}                       }),.out(r_tmp[ 24]),.cin(1'b0),.cout(q[24 - 24 ])); assign in_tmp[ 24] = ({24{q[24 - 23]}}&in_tmp[23] ) | (({24{~q[24 - 23]}})&r_tmp[ 23]  )  ;
 
-reg [31:0] tmp, out_normal;
-assign out[31:0] = tmp[31:0];
-wire [23:0] out_normal_tmp; 
-
 FS_24 EXP(.a({{16{1'b0}},in1[30:23]}), .b({{16{1'b0}},in2[30:23]}), .cin(q[24]), .cout(last_cout), .out(exponent_tmp[23:0]));
 FA_24 EXP_(.a(exponent_tmp[23:0]), .b(24'd127), .s(out_normal_tmp[23:0]), .cin(1'b0), .cout(lcout));
 
-always @(in1, in2) begin
-	out_normal[30:23] = out_normal_tmp[7:0];
-	out_normal[22:0] = (({23{q[24]}})&~q[22:0])    | ({23{~q[24]}}&~q[23:1]);
+assign	out_normal[30:23] = out_normal_tmp[7:0];
+assign	out_normal[22:0] = (({23{q[24]}})&~q[22:0])    | ({23{~q[24]}}&~q[23:1]);
+assign 	out_normal[31] = in1[31]^in2[31];
 
-	if ((in1[30:23] == 8'b0000_0000) || (in2[30:23] == 8'b0000_0000)) // 0
-	begin
-
-	end
-	else
-	begin	
-
-	end
-end
+// Result
+assign  out = ({32{!check_special}} & (out_normal)) | ({32{check_special}} & (out_special));
 
 endmodule

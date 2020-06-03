@@ -14,9 +14,6 @@ wire [23 :0] fraction_cout;
 wire    [31: 0] out_normal, out_special;
 wire            check_special;
 
-wire test;
-
-assign test = in1[31];
 // Special Case
 MUL_special_case     SP_MUL(.a(in1[31:0]), .b(in2[31:0]), .out(out_special[31:0]), .check_special(check_special));
 
