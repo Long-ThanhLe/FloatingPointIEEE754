@@ -36,14 +36,16 @@ begin
             if (((out_a == Zero) && (out_b == Inf_pos))
             ||  ((out_a == Normal) && (out_b == Inf_pos))
             ||  ((out_a == Zero) && (out_b == Inf_neg))
-            ||  ((out_a == Normal) && (out_b == Inf_neg)))
+            ||  ((out_a == Normal) && (out_b == Inf_neg))
+   	    	||  ((out_a == Zero) && (out_b == Normal)))  // 0/b = 0
                 assign out = Zero_num;
-            // Inf    
-            else if (((out_a == Inf_pos) && (out_b == Zero))
-            ||  ((out_a == Inf_neg) && (out_b == Normal))
-            ||  ((out_a == Inf_pos) && (out_b == Zero))
-            ||  ((out_a == Inf_neg) && (out_b == Normal))
-            ||  ((out_a == Normal) && (out_b == Zero)))
+            // Inf   
+            else 
+		if (((out_a == Inf_neg) && (out_b == Normal))
+            ||  ((out_a == Inf_neg) && (out_b == Normal)))
+         //   ||   ((out_a == Inf_pos) && (out_b == Zero))
+         //   ||  ((out_a == Inf_pos) && (out_b == Zero))    //inf/0 =>> NAN
+          //  ||  ((out_a == Normal) && (out_b == Zero)))  // a/0 =>> NAN
                 assign out = {a[31], Inf_abs};
             // NaN
             else
