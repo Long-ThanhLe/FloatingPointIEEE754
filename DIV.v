@@ -52,6 +52,7 @@ FS_24  FRACTION_23 (.a(({24{q[24 - 23]}}&in_tmp[23] ) | (({24{~q[24 - 23]}})&r_t
 
 FS_24 EXP(.a({{16{1'b0}},in1[30:23]}), .b({{16{1'b0}},in2[30:23]}), .cin(q[24]), .cout(last_cout), .out(exponent_tmp[23:0]));
 FA_24 EXP_(.a(exponent_tmp[23:0]), .b(24'd127), .s(out_normal_tmp[23:0]), .cin(1'b0), .cout(lcout));
+assign out = tmp;
 
 assign	out_normal[30:23] = out_normal_tmp[7:0];
 assign	out_normal[22:0] = (({23{q[24]}})&~q[22:0])    | ({23{~q[24]}}&~q[23:1]);
