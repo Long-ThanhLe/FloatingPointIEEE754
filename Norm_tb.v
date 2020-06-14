@@ -3,11 +3,14 @@ module Norm_tb();
 reg   [7: 0]    exp_max;
 reg   [24: 0]   fraction_25;
 
-wire  [7: 0]   exp_out;
-wire  [22: 0]  fraction_out;
+wire  [7: 0]   exp_out, exp_out_cla;
+wire  [22: 0]  fraction_out, fraction_out_cla;
 
-Norm    Norm_tb_1(  .exp_max(exp_max),      .fraction_25(fraction_25),  
+Norm        Norm_tb_1(  .exp_max(exp_max),      .fraction_25(fraction_25),  
                     .exp_out(exp_out),      .fraction_out(fraction_out));
+
+Norm_CLA    Norm_tb_2(  .exp_max(exp_max),      .fraction_25(fraction_25),  
+                    .exp_out(exp_out_cla),      .fraction_out(fraction_out_cla));
 
 
 

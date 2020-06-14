@@ -4,9 +4,12 @@ parameter DATA_WIDTH = 32;
   
 reg   [DATA_WIDTH - 1:  0]  a, b;
 reg   symbol;
-wire  [DATA_WIDTH - 1: 0] out;
+wire  [DATA_WIDTH - 1: 0] out, out_cla;
 
-ADD     ADD_TB(.a(a),   .b(b),  .symbol(symbol), .out(out));
+ADD               ADD_TB(.a(a),   .b(b),  .symbol(symbol), .out(out));
+
+ADD_CLA_FINAL     ADD_CLA_TB(.a(a),   .b(b),  .symbol(symbol), .out(out_cla));
+
 
 initial
 begin

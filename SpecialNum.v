@@ -25,11 +25,6 @@ begin
         begin   assign  out = Zero;
                 assign  check_out = 1'b1;
         end
-    else if ((in[30:23] == 8'd0) && (in[22:0] > 23'd0))
-        begin
-            assign  out = NaN;
-            assign  check_out = 1'b1;
-        end
     else if ((in[30:23] == 8'd255) && (in[22:0] == 23'd0) && (in[31] == 1'b0))
         begin
             assign out = Inf_pos;
@@ -40,7 +35,7 @@ begin
             assign out = Inf_neg;
             assign check_out = 1'b1;
         end
-    else if ((in[30:23] == 8'd255))
+    else if ((in[30:23] == 8'd255)  && (in[22:0] > 23'd0))
         begin
             assign out = NaN;
             assign check_out = 1'b1;
