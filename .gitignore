@@ -5,7 +5,8 @@
 *.mti
 work/
 
-exponent/exponent/exponent.cache
-exponent/exponent/exponent.hw
-exponent/exponent/exponent.ip_user_files
-exponent/exponent/exponent.sim
+project/project_1.cache
+project/project_1.hw
+project/project_1.ip_user_files
+project/project_1.sim
+project/project_1.srcs
