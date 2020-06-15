@@ -19,14 +19,15 @@ wire check_23;
 wire [23: 0] fraction_a_BigALU, fraction_b_BigALU;
 wire [4: 0] shift_num;
 wire [31: 0] fraction_a_32_shift, fraction_b_32_shift;
+wire [7: 0] shift_tmp;
 
 output [24: 0] out;
 output sign_out;
 
-and (check_23, diff_exp[4], diff_exp[3]); // 1 - bit
 
+FS_8 FS_8_SHIFT(.a(diff_exp), .b(8'b00011001), .cin(1'b0), .out(shift_tmp), .cout(check_23));
 
-assign shift_num = ({5{check_23}} & (5'b10111)) | ({5{!check_23}} & diff_exp[4:0]);  // 5 bits
+assign shift_num = ({5{!check_23}} & (5'b10111)) | ({5{check_23}} & diff_exp[4:0]);  // 5 bits
 
 
 SHIFT_RIGHT shift_fraction_a(.in({8'b0, fraction_a}), .out(fraction_a_32_shift), .shift_num(shift_num));
@@ -64,14 +65,15 @@ wire check_23;
 wire [23: 0] fraction_a_BigALU, fraction_b_BigALU;
 wire [4: 0] shift_num;
 wire [31: 0] fraction_a_32_shift, fraction_b_32_shift;
+wire [7: 0] shift_tmp;
 
 output [24: 0] out;
 output sign_out;
 
-and (check_23, diff_exp[4], diff_exp[3]); // 1 - bit
 
+SUB_CLA_8 SUB_CLA_8_SHIFT(.iA(diff_exp), .iB(8'b00011001), .iC(1'b0), .oS(shift_tmp), .oC(check_23), .oP(), .oG());
 
-assign shift_num = ({5{check_23}} & (5'b10111)) | ({5{!check_23}} & diff_exp[4:0]);  // 5 bits
+assign shift_num = ({5{!check_23}} & (5'b10111)) | ({5{check_23}} & diff_exp[4:0]);  // 5 bits
 
 
 SHIFT_RIGHT shift_fraction_a(.in({8'b0, fraction_a}), .out(fraction_a_32_shift), .shift_num(shift_num));
