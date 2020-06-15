@@ -59,6 +59,6 @@ assign	out_normal[22:0] = (({23{q[24]}})&~q[22:0])    | ({23{~q[24]}}&~q[23:1]);
 assign 	out_normal[31] = in1[31]^in2[31];
 
 // Result
-assign  out = ({32{!check_special}} & (out_normal)) | ({32{check_special}} & (out_special));
+assign  out = ({32{!check_special}} & (( ((out_normal) & ({32{!out_normal_tmp[23]}})) |  ((32'd0) & ({32{out_normal_tmp[23]}}))        ))) | ({32{check_special}} & (out_special));
 
 endmodule
