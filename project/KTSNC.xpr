@@ -3,10 +3,10 @@
 <!--                                                         -->
 <!-- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="38" Path="C:/Users/forev/Desktop/KTSNC/Advanced-Digital-Logic-Design-Project/project/project_1.xpr">
+<Project Version="7" Minor="38" Path="C:/Users/forev/Desktop/KTSNC/Advanced-Digital-Logic-Design-Project/project/KTSNC.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="d857d0a6cb9849129e14683825d61fae"/>
+    <Option Name="Id" Val="540c01cac13b4c3fb22062a16c86104a"/>
     <Option Name="Part" Val="xc7vx485tffg1157-1"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="CompiledLibDirXSim" Val=""/>
@@ -19,7 +19,6 @@
     <Option Name="CompiledLibDirActivehdl" Val="$PCACHEDIR/compile_simlib/activehdl"/>
     <Option Name="SimulatorLanguage" Val="Verilog"/>
     <Option Name="BoardPart" Val=""/>
-    <Option Name="SourceMgmtMode" Val="DisplayOnly"/>
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
     <Option Name="ProjectType" Val="Default"/>
@@ -33,7 +32,7 @@
     <Option Name="EnableBDX" Val="FALSE"/>
     <Option Name="DSAVendor" Val="xilinx"/>
     <Option Name="DSANumComputeUnits" Val="60"/>
-    <Option Name="WTXSimLaunchSim" Val="11"/>
+    <Option Name="WTXSimLaunchSim" Val="3"/>
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
@@ -61,589 +60,822 @@
   <FileSets Version="1" Minor="31">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
       <Filter Type="Srcs"/>
-      <File Path="$PPRDIR/srcs/ADD/Norm_tb.v">
+      <File Path="$PSRCDIR/sources_1/imports/srcs/ADD/ADD.v">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/srcs/ADD/ADD.v"/>
+          <Attr Name="ImportTime" Val="1592113971"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/srcs/DIV/DIV.v">
+      <File Path="$PSRCDIR/sources_1/imports/srcs/ADD/ADD_CLA_24.v">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/srcs/ADD/ADD_CLA_24.v"/>
+          <Attr Name="ImportTime" Val="1592113971"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/srcs/LIB/FA/FA_25_tb.v">
+      <File Path="$PSRCDIR/sources_1/imports/srcs/ADD/ADD_CLA_4.v">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/srcs/ADD/ADD_CLA_4.v"/>
+          <Attr Name="ImportTime" Val="1592113971"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/srcs/ADD/SUB_CLA_4_tb.v">
+      <File Path="$PSRCDIR/sources_1/imports/srcs/ADD/ADD_CLA_8.v">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/srcs/ADD/ADD_CLA_8.v"/>
+          <Attr Name="ImportTime" Val="1592113971"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/srcs/LIB/FS/FS_8.v">
+      <File Path="$PSRCDIR/sources_1/imports/srcs/ADD/ADD_CLA_FINAL.v">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/srcs/ADD/ADD_CLA_FINAL.v"/>
+          <Attr Name="ImportTime" Val="1592113971"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/srcs/ADD/ADD_CLA_8.v">
+      <File Path="$PSRCDIR/sources_1/imports/srcs/ADD/BigAlu.v">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/srcs/ADD/BigAlu.v"/>
+          <Attr Name="ImportTime" Val="1592113971"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/srcs/LIB/DECODE/DECODE_5_32.v">
+      <File Path="$PSRCDIR/sources_1/imports/srcs/ADD/CLA.v">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/srcs/ADD/CLA.v"/>
+          <Attr Name="ImportTime" Val="1592113971"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/srcs/ADD/SW_24_tb.v">
+      <File Path="$PSRCDIR/sources_1/imports/srcs/DIV/DIV.v">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/srcs/DIV/DIV.v"/>
+          <Attr Name="ImportTime" Val="1592113971"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/srcs/LIB/FS/FS_24_tb.v">
+      <File Path="$PSRCDIR/sources_1/imports/srcs/DIV/DIV_special_case.v">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/srcs/DIV/DIV_special_case.v"/>
+          <Attr Name="ImportTime" Val="1592113971"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/srcs/DIV/DIV_tb.v">
+      <File Path="$PSRCDIR/sources_1/imports/srcs/EXP/EXP_REAL.v">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/srcs/EXP/EXP_REAL.v"/>
+          <Attr Name="ImportTime" Val="1592151008"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/srcs/ADD/ADD_CLA_8_tb.v">
+      <File Path="$PSRCDIR/sources_1/imports/srcs/LIB/FA/FA.v">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/srcs/LIB/FA/FA.v"/>
+          <Attr Name="ImportTime" Val="1592113971"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/srcs/CONVERT/CONVERTER_DEC_2_BI.v">
+      <File Path="$PSRCDIR/sources_1/imports/srcs/LIB/FA/FA_24.v">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/srcs/LIB/FA/FA_24.v"/>
+          <Attr Name="ImportTime" Val="1592113971"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/srcs/LIB/FA/FA_8_tb.v">
+      <File Path="$PSRCDIR/sources_1/imports/srcs/LIB/FA/FA_4.v">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/srcs/LIB/FA/FA_4.v"/>
+          <Attr Name="ImportTime" Val="1592113971"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/srcs/ADD/ADD_CLA_24_tb.v">
+      <File Path="$PSRCDIR/sources_1/imports/srcs/LIB/FA/FA_8.v">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/srcs/LIB/FA/FA_8.v"/>
+          <Attr Name="ImportTime" Val="1592113971"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/srcs/LIB/SHIFT/SHIFT_LEFT.v">
+      <File Path="$PSRCDIR/sources_1/imports/srcs/LIB/FIRST_1_DETECTOR/FIRST_1_DETECHTOR.v">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/srcs/LIB/FIRST_1_DETECTOR/FIRST_1_DETECHTOR.v"/>
+          <Attr Name="ImportTime" Val="1592113971"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/srcs/ADD/exponent_max_tb.v">
+      <File Path="$PSRCDIR/sources_1/imports/srcs/LIB/FS/FS.v">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/srcs/LIB/FS/FS.v"/>
+          <Attr Name="ImportTime" Val="1592113971"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/srcs/ADD/SW_8bit_tb.v">
+      <File Path="$PSRCDIR/sources_1/imports/srcs/LIB/FS/FS_24.v">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/srcs/LIB/FS/FS_24.v"/>
+          <Attr Name="ImportTime" Val="1592113971"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/srcs/LIB/TAYLOR/TAYLOR_EXP.v">
+      <File Path="$PSRCDIR/sources_1/imports/srcs/LIB/FS/FS_48.v">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/srcs/LIB/FS/FS_48.v"/>
+          <Attr Name="ImportTime" Val="1592113971"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/srcs/ADD/SUB_CLA_24_tb.v">
+      <File Path="$PSRCDIR/sources_1/imports/srcs/LIB/FS/FS_8.v">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/srcs/LIB/FS/FS_8.v"/>
+          <Attr Name="ImportTime" Val="1592113971"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/srcs/LIB/SHIFT/SHIFT_RIGHT_tb.v">
+      <File Path="$PSRCDIR/sources_1/imports/srcs/ADD/LINE_2_BI.v">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/srcs/ADD/LINE_2_BI.v"/>
+          <Attr Name="ImportTime" Val="1592113971"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/srcs/ADD/SUB_CLA_24.v">
+      <File Path="$PSRCDIR/sources_1/imports/srcs/MUL/MUL.v">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/srcs/MUL/MUL.v"/>
+          <Attr Name="ImportTime" Val="1592113971"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/srcs/ADD/SW_24.v">
+      <File Path="$PSRCDIR/sources_1/imports/srcs/MUL/MUL_special_case.v">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/srcs/MUL/MUL_special_case.v"/>
+          <Attr Name="ImportTime" Val="1592113971"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/srcs/ADD/ADD_CLA_4.v">
+      <File Path="$PSRCDIR/sources_1/imports/srcs/LIB/MUX/MUX_32_1.v">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/srcs/LIB/MUX/MUX_32_1.v"/>
+          <Attr Name="ImportTime" Val="1592113971"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/srcs/ADD/LINE_2_BI.v">
+      <File Path="$PSRCDIR/sources_1/imports/srcs/ADD/Norm.v">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/srcs/ADD/Norm.v"/>
+          <Attr Name="ImportTime" Val="1592113971"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/srcs/LIB/FIRST_1_DETECTOR/FIRST_1_DETECTOR_v2.v">
+      <File Path="$PSRCDIR/sources_1/imports/srcs/EXP/ROOT_REAL.v">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/srcs/EXP/ROOT_REAL.v"/>
+          <Attr Name="ImportTime" Val="1592152865"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/srcs/MUL/MUL.v">
+      <File Path="$PSRCDIR/sources_1/imports/srcs/LIB/SHIFT/SHIFT_LEFT.v">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/srcs/LIB/SHIFT/SHIFT_LEFT.v"/>
+          <Attr Name="ImportTime" Val="1592113971"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/srcs/ADD/control_tb.v">
+      <File Path="$PSRCDIR/sources_1/imports/srcs/LIB/SHIFT/SHIFT_RIGHT.v">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/srcs/LIB/SHIFT/SHIFT_RIGHT.v"/>
+          <Attr Name="ImportTime" Val="1592113971"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/srcs/LIB/FS/FS_48.v">
+      <File Path="$PSRCDIR/sources_1/imports/srcs/ADD/SUB_CLA_24.v">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/srcs/ADD/SUB_CLA_24.v"/>
+          <Attr Name="ImportTime" Val="1592113971"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/srcs/LIB/FIRST_1_DETECTOR/FIRST_1_DETECHTOR.v">
+      <File Path="$PSRCDIR/sources_1/imports/srcs/ADD/SUB_CLA_4.v">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/srcs/ADD/SUB_CLA_4.v"/>
+          <Attr Name="ImportTime" Val="1592113971"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/srcs/LIB/TAYLOR/TAYLOR_LN_tb.v">
+      <File Path="$PSRCDIR/sources_1/imports/srcs/ADD/SUB_CLA_8.v">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/srcs/ADD/SUB_CLA_8.v"/>
+          <Attr Name="ImportTime" Val="1592113971"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/srcs/ADD/Norm.v">
+      <File Path="$PSRCDIR/sources_1/imports/srcs/ADD/SW_24.v">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/srcs/ADD/SW_24.v"/>
+          <Attr Name="ImportTime" Val="1592113971"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/srcs/LIB/TAYLOR/TAYLOR_EXP_tb.v">
+      <File Path="$PSRCDIR/sources_1/imports/srcs/ADD/Sepcial_Add.v">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/srcs/ADD/Sepcial_Add.v"/>
+          <Attr Name="ImportTime" Val="1592113971"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/srcs/LIB/MUX/MUX_32_1.v">
+      <File Path="$PSRCDIR/sources_1/imports/srcs/ADD/SpecialNum.v">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/srcs/ADD/SpecialNum.v"/>
+          <Attr Name="ImportTime" Val="1592113971"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/srcs/ADD/LINE_2_BI_tb.v">
+      <File Path="$PSRCDIR/sources_1/imports/srcs/LIB/TAYLOR/TAYLOR_EXP.v">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/srcs/LIB/TAYLOR/TAYLOR_EXP.v"/>
+          <Attr Name="ImportTime" Val="1592131375"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/srcs/ADD/SpecialNum_tb.v">
+      <File Path="$PSRCDIR/sources_1/imports/srcs/LIB/TAYLOR/TAYLOR_LN.v">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/srcs/LIB/TAYLOR/TAYLOR_LN.v"/>
+          <Attr Name="ImportTime" Val="1592130337"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/srcs/ADD/smallALU_tb.v">
+      <File Path="$PSRCDIR/sources_1/imports/srcs/ADD/control.v">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/srcs/ADD/control.v"/>
+          <Attr Name="ImportTime" Val="1592113971"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/srcs/ADD/Special_Add_tb.v">
+      <File Path="$PSRCDIR/sources_1/imports/srcs/ADD/exponent_max.v">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/srcs/ADD/exponent_max.v"/>
+          <Attr Name="ImportTime" Val="1592113971"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/srcs/ADD/ADD_CLA_FINAL.v">
+      <File Path="$PSRCDIR/sources_1/imports/srcs/ADD/smallALU.v">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/srcs/ADD/smallALU.v"/>
+          <Attr Name="ImportTime" Val="1592113971"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/srcs/ADD/ADD_tb.v">
+      <File Path="$PSRCDIR/sources_1/imports/srcs/EXP/ROOT_REAL_tb.v">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/srcs/EXP/ROOT_REAL_tb.v"/>
+          <Attr Name="ImportTime" Val="1592152768"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/srcs/CONVERT/CONVERTER_DEC_2_BI_tb.v">
+      <File Path="$PSRCDIR/sources_1/imports/srcs/ADD/ADD_tb.v">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/srcs/ADD/ADD_tb.v"/>
+          <Attr Name="ImportTime" Val="1592125541"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/srcs/LIB/FA/FA_24_tb.v">
+      <File Path="$PSRCDIR/sources_1/imports/srcs/ADD/ADD_CLA_24_tb.v">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/srcs/ADD/ADD_CLA_24_tb.v"/>
+          <Attr Name="ImportTime" Val="1592113971"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/srcs/ADD/ADD_CLA_4_tb.v">
+      <File Path="$PSRCDIR/sources_1/imports/srcs/ADD/ADD_CLA_4_tb.v">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/srcs/ADD/ADD_CLA_4_tb.v"/>
+          <Attr Name="ImportTime" Val="1592113971"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/srcs/DIV/DIV_special_case.v">
+      <File Path="$PSRCDIR/sources_1/imports/srcs/ADD/ADD_CLA_8_tb.v">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/srcs/ADD/ADD_CLA_8_tb.v"/>
+          <Attr Name="ImportTime" Val="1592113971"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/srcs/LIB/FA/FA_24.v">
+      <File Path="$PSRCDIR/sources_1/imports/srcs/ADD/ALU_small.v">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/srcs/ADD/ALU_small.v"/>
+          <Attr Name="ImportTime" Val="1592113971"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/srcs/CONVERT/CONVERT_BI_2_DEC.v">
+      <File Path="$PSRCDIR/sources_1/imports/srcs/ADD/BigAlu_tb.v">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/srcs/ADD/BigAlu_tb.v"/>
+          <Attr Name="ImportTime" Val="1592113971"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/srcs/ADD/SUB_CLA.v">
+      <File Path="$PSRCDIR/sources_1/imports/srcs/CONVERT/CONVERTER_BI_2_DEC_tb.v">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/srcs/CONVERT/CONVERTER_BI_2_DEC_tb.v"/>
+          <Attr Name="ImportTime" Val="1592113971"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/srcs/ADD/BigAlu.v">
+      <File Path="$PSRCDIR/sources_1/imports/srcs/CONVERT/CONVERTER_DEC_2_BI.v">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/srcs/CONVERT/CONVERTER_DEC_2_BI.v"/>
+          <Attr Name="ImportTime" Val="1592113971"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/srcs/ADD/SW_8bit.v">
+      <File Path="$PSRCDIR/sources_1/imports/srcs/CONVERT/CONVERTER_DEC_2_BI_tb.v">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/srcs/CONVERT/CONVERTER_DEC_2_BI_tb.v"/>
+          <Attr Name="ImportTime" Val="1592113971"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/srcs/LIB/FA/FA_128.v">
+      <File Path="$PSRCDIR/sources_1/imports/srcs/CONVERT/CONVERT_BI_2_DEC.v">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/srcs/CONVERT/CONVERT_BI_2_DEC.v"/>
+          <Attr Name="ImportTime" Val="1592113971"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/srcs/EXP/EXP_REAL.v">
+      <File Path="$PSRCDIR/sources_1/imports/srcs/LIB/DECODE/DECODE_5_32.v">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/srcs/LIB/DECODE/DECODE_5_32.v"/>
+          <Attr Name="ImportTime" Val="1592113971"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/srcs/ADD/SpecialNum.v">
+      <File Path="$PSRCDIR/sources_1/imports/srcs/DIV/DIV_tb.v">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/srcs/DIV/DIV_tb.v"/>
+          <Attr Name="ImportTime" Val="1592113971"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/srcs/MUL/MUL_special_case.v">
+      <File Path="$PSRCDIR/sources_1/imports/srcs/EXP/EXP_REAL_tb.v">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/srcs/EXP/EXP_REAL_tb.v"/>
+          <Attr Name="ImportTime" Val="1592114386"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/srcs/LIB/SHIFT/SHIFT_LEFT_tb.v">
+      <File Path="$PSRCDIR/sources_1/imports/srcs/LIB/FA/FA_128.v">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/srcs/LIB/FA/FA_128.v"/>
+          <Attr Name="ImportTime" Val="1592113971"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/srcs/LIB/FA/FA.v">
+      <File Path="$PSRCDIR/sources_1/imports/srcs/LIB/FA/FA_24_tb.v">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/srcs/LIB/FA/FA_24_tb.v"/>
+          <Attr Name="ImportTime" Val="1592113971"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/srcs/LIB/FIRST_1_DETECTOR/FIRST_1_DETECTION_v2_tb.v">
+      <File Path="$PSRCDIR/sources_1/imports/srcs/LIB/FA/FA_25.v">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/srcs/LIB/FA/FA_25.v"/>
+          <Attr Name="ImportTime" Val="1592113971"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/srcs/ADD/Sepcial_Add.v">
+      <File Path="$PSRCDIR/sources_1/imports/srcs/LIB/FA/FA_25_tb.v">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/srcs/LIB/FA/FA_25_tb.v"/>
+          <Attr Name="ImportTime" Val="1592113971"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/srcs/ADD/BigAlu_tb.v">
+      <File Path="$PSRCDIR/sources_1/imports/srcs/LIB/FA/FA_8_tb.v">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/srcs/LIB/FA/FA_8_tb.v"/>
+          <Attr Name="ImportTime" Val="1592113971"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/srcs/ADD/CLA.v">
+      <File Path="$PSRCDIR/sources_1/imports/srcs/LIB/FA/FA_tb.v">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/srcs/LIB/FA/FA_tb.v"/>
+          <Attr Name="ImportTime" Val="1592113971"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/srcs/ADD/SW_23.v">
+      <File Path="$PSRCDIR/sources_1/imports/srcs/LIB/FIRST_1_DETECTOR/FIRST_1_DETECTION_v2_tb.v">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/srcs/LIB/FIRST_1_DETECTOR/FIRST_1_DETECTION_v2_tb.v"/>
+          <Attr Name="ImportTime" Val="1592113971"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/srcs/LIB/FS/FS.v">
+      <File Path="$PSRCDIR/sources_1/imports/srcs/LIB/FIRST_1_DETECTOR/FIRST_1_DETECTOR_tb.v">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/srcs/LIB/FIRST_1_DETECTOR/FIRST_1_DETECTOR_tb.v"/>
+          <Attr Name="ImportTime" Val="1592113971"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/srcs/ADD/exponent_max.v">
+      <File Path="$PSRCDIR/sources_1/imports/srcs/LIB/FIRST_1_DETECTOR/FIRST_1_DETECTOR_v2.v">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/srcs/LIB/FIRST_1_DETECTOR/FIRST_1_DETECTOR_v2.v"/>
+          <Attr Name="ImportTime" Val="1592113971"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/srcs/ADD/ALU_small.v">
+      <File Path="$PSRCDIR/sources_1/imports/srcs/LIB/FS/FS_24_tb.v">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/srcs/LIB/FS/FS_24_tb.v"/>
+          <Attr Name="ImportTime" Val="1592113971"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/srcs/ADD/SUB_CLA_8_tb.v">
+      <File Path="$PSRCDIR/sources_1/imports/srcs/LIB/FS/FS_8_tb.v">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/srcs/LIB/FS/FS_8_tb.v"/>
+          <Attr Name="ImportTime" Val="1592113971"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/srcs/ADD/smallALU.v">
+      <File Path="$PSRCDIR/sources_1/imports/srcs/ADD/LINE_2_BI_tb.v">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/srcs/ADD/LINE_2_BI_tb.v"/>
+          <Attr Name="ImportTime" Val="1592113971"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/srcs/LIB/FS/FS_24.v">
+      <File Path="$PSRCDIR/sources_1/imports/srcs/MUL/MUL_tb.v">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/srcs/MUL/MUL_tb.v"/>
+          <Attr Name="ImportTime" Val="1592113971"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/srcs/ADD/control.v">
+      <File Path="$PSRCDIR/sources_1/imports/srcs/LIB/MUX/MUX_23_1.v">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/srcs/LIB/MUX/MUX_23_1.v"/>
+          <Attr Name="ImportTime" Val="1592113971"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/srcs/LIB/MUX/MUX_23_1_tb.v">
+      <File Path="$PSRCDIR/sources_1/imports/srcs/LIB/MUX/MUX_23_1_tb.v">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/srcs/LIB/MUX/MUX_23_1_tb.v"/>
+          <Attr Name="ImportTime" Val="1592113971"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/srcs/LIB/MUX/MUX_32_1_tb.v">
+      <File Path="$PSRCDIR/sources_1/imports/srcs/LIB/MUX/MUX_32_1_tb.v">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/srcs/LIB/MUX/MUX_32_1_tb.v"/>
+          <Attr Name="ImportTime" Val="1592113971"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/srcs/LIB/FA/FA_8.v">
+      <File Path="$PSRCDIR/sources_1/imports/srcs/ADD/Norm_tb.v">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/srcs/ADD/Norm_tb.v"/>
+          <Attr Name="ImportTime" Val="1592113971"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/srcs/LIB/FIRST_1_DETECTOR/FIRST_1_DETECTOR_tb.v">
+      <File Path="$PSRCDIR/sources_1/imports/srcs/LIB/SHIFT/SHIFT_LEFT_tb.v">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/srcs/LIB/SHIFT/SHIFT_LEFT_tb.v"/>
+          <Attr Name="ImportTime" Val="1592113971"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/srcs/LIB/SHIFT/SHIFT_RIGHT.v">
+      <File Path="$PSRCDIR/sources_1/imports/srcs/LIB/SHIFT/SHIFT_RIGHT_tb.v">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/srcs/LIB/SHIFT/SHIFT_RIGHT_tb.v"/>
+          <Attr Name="ImportTime" Val="1592113971"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/srcs/ADD/SUB_CLA_4.v">
+      <File Path="$PSRCDIR/sources_1/imports/srcs/ADD/SUB_CLA.v">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/srcs/ADD/SUB_CLA.v"/>
+          <Attr Name="ImportTime" Val="1592113971"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/srcs/LIB/FA/FA_4.v">
+      <File Path="$PSRCDIR/sources_1/imports/srcs/ADD/SUB_CLA_24_tb.v">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/srcs/ADD/SUB_CLA_24_tb.v"/>
+          <Attr Name="ImportTime" Val="1592113971"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/srcs/ADD/ADD.v">
+      <File Path="$PSRCDIR/sources_1/imports/srcs/ADD/SUB_CLA_4_tb.v">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/srcs/ADD/SUB_CLA_4_tb.v"/>
+          <Attr Name="ImportTime" Val="1592113971"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/srcs/ADD/SUB_CLA_8.v">
+      <File Path="$PSRCDIR/sources_1/imports/srcs/ADD/SUB_CLA_8_tb.v">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/srcs/ADD/SUB_CLA_8_tb.v"/>
+          <Attr Name="ImportTime" Val="1592113971"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/srcs/LIB/FA/FA_tb.v">
+      <File Path="$PSRCDIR/sources_1/imports/srcs/ADD/SW_23.v">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/srcs/ADD/SW_23.v"/>
+          <Attr Name="ImportTime" Val="1592128884"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/srcs/LIB/FS/FS_8_tb.v">
+      <File Path="$PSRCDIR/sources_1/imports/srcs/ADD/SW_24_tb.v">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/srcs/ADD/SW_24_tb.v"/>
+          <Attr Name="ImportTime" Val="1592113971"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/srcs/LIB/MUX/MUX_23_1.v">
+      <File Path="$PSRCDIR/sources_1/imports/srcs/ADD/SW_8bit.v">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/srcs/ADD/SW_8bit.v"/>
+          <Attr Name="ImportTime" Val="1592113971"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/srcs/MUL/MUL_tb.v">
+      <File Path="$PSRCDIR/sources_1/imports/srcs/ADD/SW_8bit_tb.v">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/srcs/ADD/SW_8bit_tb.v"/>
+          <Attr Name="ImportTime" Val="1592113971"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/srcs/EXP/EXP_REAL_tb.v">
+      <File Path="$PSRCDIR/sources_1/imports/srcs/ADD/SpecialNum_tb.v">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/srcs/ADD/SpecialNum_tb.v"/>
+          <Attr Name="ImportTime" Val="1592113971"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/srcs/CONVERT/CONVERTER_BI_2_DEC_tb.v">
+      <File Path="$PSRCDIR/sources_1/imports/srcs/ADD/Special_Add_tb.v">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/srcs/ADD/Special_Add_tb.v"/>
+          <Attr Name="ImportTime" Val="1592113971"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/srcs/LIB/FA/FA_25.v">
+      <File Path="$PSRCDIR/sources_1/imports/srcs/LIB/TAYLOR/TAYLOR_EXP_tb.v">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/srcs/LIB/TAYLOR/TAYLOR_EXP_tb.v"/>
+          <Attr Name="ImportTime" Val="1592124368"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/srcs/LIB/TAYLOR/TAYLOR_LN.v">
+      <File Path="$PSRCDIR/sources_1/imports/srcs/LIB/TAYLOR/TAYLOR_LN_tb.v">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/srcs/LIB/TAYLOR/TAYLOR_LN_tb.v"/>
+          <Attr Name="ImportTime" Val="1592113971"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/srcs/ADD/ADD_CLA_24.v">
+      <File Path="$PSRCDIR/sources_1/imports/srcs/ADD/control_tb.v">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/srcs/ADD/control_tb.v"/>
+          <Attr Name="ImportTime" Val="1592113971"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/srcs/ADD/exponent_max_tb.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/srcs/ADD/exponent_max_tb.v"/>
+          <Attr Name="ImportTime" Val="1592113971"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/srcs/ADD/smallALU_tb.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/srcs/ADD/smallALU_tb.v"/>
+          <Attr Name="ImportTime" Val="1592113971"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -651,8 +883,7 @@
       </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
-        <Option Name="TopModule" Val="EXP_REAL"/>
-        <Option Name="TopAutoSet" Val="TRUE"/>
+        <Option Name="TopModule" Val="ROOT_REAL_tb"/>
       </Config>
     </FileSet>
     <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
@@ -662,20 +893,19 @@
       </Config>
     </FileSet>
     <FileSet Name="sim_1" Type="SimulationSrcs" RelSrcDir="$PSRCDIR/sim_1">
-      <Filter Type="Srcs"/>
-      <File Path="$PPRDIR/simulation/EXP_REAL_tb_behav.wcfg">
+      <File Path="$PPRDIR/simulation/ROOT_REAL_tb_behav.wcfg">
         <FileInfo>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
-        <Option Name="TopModule" Val="EXP_REAL_tb"/>
+        <Option Name="TopModule" Val="ROOT_REAL_tb"/>
         <Option Name="TopLib" Val="xil_defaultlib"/>
         <Option Name="TransportPathDelay" Val="0"/>
         <Option Name="TransportIntDelay" Val="0"/>
         <Option Name="SrcSet" Val="sources_1"/>
-        <Option Name="XSimWcfgFile" Val="$PPRDIR/simulation/EXP_REAL_tb_behav.wcfg"/>
+        <Option Name="XSimWcfgFile" Val="$PPRDIR/simulation/ROOT_REAL_tb_behav.wcfg"/>
       </Config>
     </FileSet>
   </FileSets>
@@ -700,7 +930,9 @@
   <Runs Version="1" Minor="10">
     <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7vx485tffg1157-1" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" State="current" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
         <Step Id="synth_design"/>
       </Strategy>
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
@@ -708,7 +940,9 @@
     </Run>
     <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7vx485tffg1157-1" ConstrsSet="constrs_1" Description="Default settings for Implementation." WriteIncrSynthDcp="false" State="current" SynthRun="synth_1" IncludeInArchive="true" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>

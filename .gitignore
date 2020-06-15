@@ -5,9 +5,9 @@
 *.mti
 work/
 
-project/project_1.cache
-project/project_1.hw
-project/project_1.ip_user_files
-project/project_1.sim
-project/project_1.srcs
+project/KTSNC.cache
+project/KTSNC.hw
+project/KTSNC.ip_user_files
+project/KTSNC.sim
+project/KTSNC.srcs
 **vivado**

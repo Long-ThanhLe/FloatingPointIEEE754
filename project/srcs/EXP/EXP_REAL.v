@@ -8,16 +8,16 @@ module EXP_REAL(
 // base ^ exp = e ^ (exp * ln(base))
 //            = e ^ (exp * ln( (2^ (base_exp_real)) * base_frac) )
 //            = e ^ (exp * (base_exp_real*ln(2) + ln(base_frac))
-//            = e ^ (exp * (base_exp_real*ln(2) + ln(base_frac/4) + 2*ln(2))
-//            = e ^ (exp * ((base_exp - 127)*ln(2) + ln(base_frac/4) + 2*ln(2))
-//            = e ^ (exp * (base_exp*ln(2) + ln(base_frac/4) - 125*ln(2))
+//            = e ^ (exp * (base_exp_real*ln(2) + ln(base_frac/4) + 2*ln(2)))
+//            = e ^ (exp * ((base_exp - 127)*ln(2) + ln(base_frac/4) + 2*ln(2)))
+//            = e ^ (exp * (base_exp*ln(2) + ln(base_frac/4) - 125*ln(2)))
 
 // fp_base_frac : floating point version of base_frac
 // fp_base_frac_div_4 : floating point version of base_frac/4
 // ln_base_frac_div_4 : ln(fp_base_frac_div_4)
 // ln2_0, ln2_1, ln2_2, ln2_3, ln2_4, ln2_5, ln2_6, ln2_7: constant
 // total_exp : base_exp*ln(2) + ln(base_frac/4) + 2*ln(2)
-// total_exp_mul_exp = exp * (base_exp*ln(2) + ln(base_frac/4) + 2*ln(2)
+// total_exp_mul_exp = exp * (base_exp*ln(2) + ln(base_frac/4) + 2*ln(2))
 // total_exp_div_1024 = total_exp_mul_exp / 1024
 
 input [31:0] base;
@@ -108,7 +108,8 @@ MUL MUL________(.in1(result__8[31:0]), .in2(result__8[31:0]), .out(result__4[31:
 MUL MUL_________(.in1(result__4[31:0]), .in2(result__4[31:0]), .out(result__2[31:0]));
 MUL MUL__________(.in1(result__2[31:0]), .in2(result__2[31:0]), .out(result__1[31:0]));
 
-assign out = result__1[31:0];
+// special case
+assign out = base[31] ? 32'b0_1111111_10000000_00000000_00000000 : result__1[31:0];
 
 endmodule
 
