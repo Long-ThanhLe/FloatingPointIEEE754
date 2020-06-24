@@ -1,4 +1,4 @@
-module ADD_tb();
+module ADD__tb();
 
 parameter DATA_WIDTH = 32;
   
