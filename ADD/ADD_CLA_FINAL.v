@@ -32,6 +32,6 @@ Norm_CLA            NORM_FRAC_CLA(.exp_max(exp_max),   .fraction_25(fraction_25)
 Special_Add     SP_ADD(.a(a),   .b(b),  .symbol(symbol),
                        .out(out_special),   .check_special(check_special));
 
-assign  out = ({32{!check_special}} & (out_normal)) | ({32{check_special}} & (out_special));
+assign  out = (check_special == 1'b0) ? ((a == b) ? 32'd0 : ({32{!check_special}} & (out_normal)) | ({32{check_special}} & (out_special))) : out_special;
 
 endmodule
